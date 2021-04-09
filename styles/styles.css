@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+/* General*/
+:root {
+    --mh-purple: #ff4dd0;
+    --mh-blue: #4bccff;
+    --mh-black: #15191D;
+    
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Titillium Web', sans-serif;  
+    line-height: 1.6;
+}
+
+body {
+    background: var(--mh-black); 
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    width: 100%;
+}
+
+
+/*Reusable*/
+.container {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+}
+
+/*Header menu*/
+.header-menu-container {
+    height: auto;
+    border-bottom: 2px solid var(--mh-purple);
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase; 
+    background-color: var(--mh-black);
+
+}
+
+/*to review*/
+.sticky {
+    width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+.header-menu.container.flex {
+    padding: 10px 10px 10px 60px;
+    color:white;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+}
+
+.navbar-logo, .navbar-items {
+    margin: 5px;
+    padding: 5px;
+} 
+
+.navbar-items ul li{
+    padding-right: 20px;
+}
+
+/*Hero Image*/
+.hero-image {
+    margin: auto;
+    
+    height: 70vh;
+    background-image: url("../media/_location-heat-viceversa.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.hero-content {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.hero-content h1 {
+    margin: auto;    
+}
+
+/*Score Slide*/
+.score-summary-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: stretch;
+    grid-gap: 20px;
+    padding: 40px 0 40px 0;
+}
+
+.game-card {
+    flex-direction: column;
+    text-transform: uppercase;
+    background-color: white;
+    font-weight: bold;
+}
+
+.game-card .score-detail {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 5px 0 5px 0;
+}
+
+.game-card .score-detail img{
+    width: 50px;
+    height: auto;
+}
+
+.game-card .match-location{
+    background-color: #474747;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    color: white;
+}
+
+
+/*Footer*/
+.footer-menu {
+    height: auto;
+    font-weight: bold;
+    color: white;
+    padding: 30px 10px 30px 10px;
+    flex-direction: column;
+}
+
+.footer-menu .divider {
+    padding: 30px 0px 30px 0px;
+}
+
+.divider-line {
+    grid-column: 1 /  4;
+    grid-row: 1;
+    width: 100%;
+    height: 2px;
+    z-index: 0;
+    background: linear-gradient(135deg, #ff4dd0, #4bccff);
+}
+
+.footer-menu .divider .divider-logo{
+    grid-column: 2 /  3;
+    grid-row: 1;
+    width: 80px;
+    height: auto;
+    z-index: 1;
+
+}
+
+.footer-menu-container {
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.footer-menu-items h3 {
+    text-transform: uppercase;
+    color: var(--mh-purple);
+    font-size: 1.2em;
+}
+
+
+
+/* .container {
+    background: linear-gradient(135deg, #ff4dd0, #4bccff);
+    filter: blur(0px);
+    height: 70vh;
+    
+    margin: auto;
+} */
