@@ -15,7 +15,7 @@
             </div>
             <nav class="navbar-items">
                 <ul id="navbar-list-items" class="flex">
-                    <!--Menu to be injected-->
+                    <!--Menu is injected by JS-->
                 </ul>
             </nav>
         </div>
@@ -30,8 +30,11 @@
 
     <!--Scores Summary-->
     <div class="score-summary-container-big">
-        <div class="score-summary-container container grid">
-
+        <div class="container">
+            <h2 class="section-title">Scores</h2>
+        </div>  
+        <div class="score-summary-container container grid" id="score-container">
+            <!--All Scores are injected by JS, the following is just an example of the markup-->
             <div class="match-score game-card flex">
                 <div class="match-date">
                     Final
@@ -47,60 +50,31 @@
                     <span>Los Angeles</span>
                 </div>
             </div>
-
-            <div class="match-score game-card flex">
-                <div class="match-date">
-                    Final
-                </div>
-                <div class="score-detail flex">
-                    <img src="./media/LAL.png" alt="">
-                    <span>104</span>
-                    <span>-</span>
-                    <span>110</span>
-                    <img src="./media/MIA-viceversa.png" alt="">
-                </div>
-                <div class="match-location flex">
-                    <span>Los Angeles</span>
-                </div>
-            </div>
-
-            <div class="match-score game-card flex">
-                <div class="match-date">
-                    Final
-                </div>
-                <div class="score-detail flex">
-                    <img src="./media/LAL.png" alt="">
-                    <span>104</span>
-                    <span>-</span>
-                    <span>110</span>
-                    <img src="./media/MIA-viceversa.png" alt="">
-                </div>
-                <div class="match-location flex">
-                    <span>Los Angeles</span>
-                </div>
-            </div>
-
-            <div class="match-score game-card flex">
-                <div class="match-date">
-                    Final
-                </div>
-                <div class="score-detail flex">
-                    <img src="./media/LAL.png" alt="">
-                    <span>104</span>
-                    <span>-</span>
-                    <span>110</span>
-                    <img src="./media/MIA-viceversa.png" alt="">
-                </div>
-                <div class="match-location flex">
-                    <span>Los Angeles</span>
-                </div>
-            </div>
-
         </div>
     </div>
 
+        <!--Team-->
+        <div class="team-container-big">
+            <div class="container">
+                <h2 class="section-title">Team</h2>
+            </div>  
+            <div class="team-container container grid" id="team-container">
+                <!--All TEam members are injected by JS, the following is just an example of the markup-->
+                <div class="player-card flex">
+                    <img src="./media/players/roster-vv-2772.png" alt="">
+                    <div class="player-info">
+                        <div class="player-name">
+                            <span>Precious Achiuwa</span>
+                        </div>
+                        <div class="player-position">
+                            <span>#5 Forward</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-
+    <!--Footer Menu-->
     <footer class="footer-menu container">
         <div class="divider grid">
             <div class="container divider-line ">
@@ -110,10 +84,9 @@
                 <img src="./media/mh_logo.PNG" alt="">
             </span>
         </div>
-
         <div class="footer-menu-container container flex">
             <div class="footer-menu-items">
-                <h3>Team</h3>
+                <h3>Scores</h3>
                 <ul>
                     <li>Players</li>
                     <li>Team Stats</li>
@@ -127,21 +100,20 @@
                 </ul>
             </div>
             <div class="footer-menu-items">
-                <h3>Team</h3>
+                <h3>Schedule</h3>
                 <ul>
                     <li>Players</li>
                     <li>Team Stats</li>
                 </ul>
             </div>
             <div class="footer-menu-items">
-                <h3>Team</h3>
+                <h3>Community</h3>
                 <ul>
-                    <li>Players</li>
+                    <li>Community</li>
                     <li>Team Stats</li>
                 </ul>
             </div>
         </div>
-
     </footer>
 
     <script src="./js/app.js"></script>
