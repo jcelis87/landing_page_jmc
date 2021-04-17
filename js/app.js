@@ -1,27 +1,28 @@
 
-//sticky header
-const header = document.getElementById('sticky-header-menu');
-const sticky = header.offsetTop;
+// //sticky header
+// const header = document.getElementById('sticky-header-menu');
+// const sticky = header.offsetTop;
 
-window.onscroll = () => {
-    if (window.pageYOffset > sticky){
-        // console.log(window.pageYOffset);
-        // console.log(sticky);
+// window.onscroll = () => {
+//     if (window.pageYOffset > sticky){
+//         // console.log(window.pageYOffset);
+//         // console.log(sticky);
         
-        header.classList.add('sticky');
-    } else {
-        header.classList.remove('sticky');
-    }
+//         header.classList.add('sticky');
+//     } else {
+//         header.classList.remove('sticky');
+//     }
 
-}
+// }
 
 /*Navbar*/
 /*Navbar items declarions: menu items texts + links */
 navbar_items = [
-    {'item_name': 'Scores', 'link': './teams', 'class':'navbar-item'},
-    {'item_name': 'Team', 'link': './teams', 'class':'navbar-item'},
-    {'item_name': 'Schedule', 'link': './teams', 'class':'navbar-item'},
-    {'item_name': 'Community', 'link': './teams', 'class':'navbar-item'}
+    {'item_name': 'Scores', 'link': '#scores', 'class':'navbar-item'},
+    {'item_name': 'Team', 'link': '#team', 'class':'navbar-item'},
+    {'item_name': 'Schedule', 'link': '#schedule', 'class':'navbar-item'},
+    {'item_name': 'Community', 'link': '#community', 'class':'navbar-item'},
+    {'item_name': 'Live', 'link': '#live', 'class':'navbar-item'}
 ];
 
 const fragment = new DocumentFragment();
@@ -36,6 +37,19 @@ navbar_items.forEach(navbar_item => {
 });
 
 item.appendChild(fragment);
+
+/*Navbar Locator*/
+
+const section_title = document.querySelectorAll('H2');
+console.log(section_title);
+
+window.addEventListener('load', e => {
+    console.log(e);
+    // navbar_item_underlined = document.
+});
+
+
+
 
 /*Scores*/
 /*Scores from previous matches*/

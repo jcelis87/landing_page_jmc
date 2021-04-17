@@ -27,6 +27,7 @@ ul {
 a {
     text-decoration: none;
     color: white;
+    text-decoration-color: var(--mh-purple);
 }
 
 img {
@@ -72,13 +73,7 @@ h2 {
     color: white;
     text-transform: uppercase; 
     background-color: var(--mh-black);
-
-}
-
-/*to review*/
-.sticky {
-    width: 100%;
-    position: fixed;
+    position: sticky;
     top: 0;
 }
 
@@ -98,6 +93,13 @@ h2 {
 .navbar-items ul li{
     padding-right: 20px;
 }
+
+.underlined-navbar-item {
+    text-decoration: underline;
+    
+}
+
+
 
 /*Hero Image*/
 .hero-image {
