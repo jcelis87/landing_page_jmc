@@ -11,7 +11,7 @@
     <header id="sticky-header-menu"  class="header-menu-container">
         <div  class="header-menu container flex">
             <div id="main-logo" class="navbar-logo">
-                JMC
+                <a href="#page-top" id="navbar-item-0">JMC</a>
             </div>
             <nav class="navbar-items">
                 <ul id="navbar-list-items" class="flex">
@@ -23,15 +23,15 @@
 
     <!--Hero Image-->
     <div class="hero-image flex">
-        <div class="container hero-content flex">
-            <h1>Next Match</h1>
+        <div class="container hero-content flex" id='hero'>
+            <h1>NBA Favourite Team</h1>
         </div>
     </div>
 
     <!--Scores Summary-->
     <div class="score-summary-container-big">
         <div class="container">
-            <h2 class="section-title">Scores</h2>
+            <h2 class="section-title" id="scores">Scores</h2>
         </div>  
         <div class="score-summary-container container grid" id="score-container">
             <!--All Scores are injected by JS, the following is just an example of the markup-->
@@ -56,7 +56,7 @@
         <!--Team-->
         <div class="team-container-big">
             <div class="container">
-                <h2 class="section-title">Team</h2>
+                <h2 class="section-title" id="team">Team</h2>
             </div>  
             <div class="team-container container grid" id="team-container">
                 <!--All TEam members are injected by JS, the following is just an example of the markup-->
@@ -71,6 +71,51 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!--Schedule-->
+        <div class="schedule-container-big">
+            <div class="container">
+                <h2 class="section-title" id="schedule">Schedule</h2>
+            </div>  
+            <div class="schedule-summary-container container grid" id="schedule-container">
+                <!--All Schedule are injected by JS, the following is just an example of the markup-->
+                <div class="match-score game-card flex">
+                    <div class="match-date">
+                        Tuesday - April 27th, 2021
+                    </div>
+                    <div class="score-detail flex">
+                        <img src="./media/LAL.png" alt="">
+                        <span>-</span>
+                        <span>-</span>
+                        <span>-</span>
+                        <img src="./media/MIA-viceversa.png" alt="">
+                    </div>
+                    <div class="match-location flex">
+                        <span>Denver</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Live-->
+        <div class="live-container-big">
+            <div class="container">
+                <h2 class="section-title" id="live">Live</h2>
+            </div>  
+            <div class="live-summary-container container grid" id="live-container">
+              
+            </div>
+        </div>
+        
+        <!--Store-->
+        <div class="store-container-big">
+            <div class="container">
+                <h2 class="section-title" id="store">Store</h2>
+            </div>  
+            <div class="store-summary-container container grid" id="store-container">
+                
             </div>
         </div>
 

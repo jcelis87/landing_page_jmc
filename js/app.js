@@ -1,41 +1,161 @@
-
-//sticky header
-const header = document.getElementById('sticky-header-menu');
-const sticky = header.offsetTop;
-
-window.onscroll = () => {
-    if (window.pageYOffset > sticky){
-        // console.log(window.pageYOffset);
-        // console.log(sticky);
-        
-        header.classList.add('sticky');
-    } else {
-        header.classList.remove('sticky');
-    }
-
-}
-
 /*Navbar*/
 /*Navbar items declarions: menu items texts + links */
 navbar_items = [
-    {'item_name': 'Scores', 'link': './teams', 'class':'navbar-item'},
-    {'item_name': 'Team', 'link': './teams', 'class':'navbar-item'},
-    {'item_name': 'Schedule', 'link': './teams', 'class':'navbar-item'},
-    {'item_name': 'Community', 'link': './teams', 'class':'navbar-item'}
+    {'item_name': 'Scores', 'link': '#', 'class':'navbar-item'},
+    {'item_name': 'Team', 'link': '#', 'class':'navbar-item'},
+    {'item_name': 'Schedule', 'link': '#', 'class':'navbar-item'},
+    {'item_name': 'Live', 'link': '#', 'class':'navbar-item'},
+    {'item_name': 'Store', 'link': '#', 'class':'navbar-item'},
 ];
 
 const fragment = new DocumentFragment();
 const item = document.getElementById('navbar-list-items');
+let counter = 1;
 
 navbar_items.forEach(navbar_item => {
     //creates <li> 
     const new_item = document.createElement('li');
     new_item.innerHTML = `<a href="${navbar_item.link}">${navbar_item.item_name}</a>`;
     new_item.classList.add(navbar_item.class);
+    new_item.setAttribute("id", `navbar-item-${counter}`);
+    counter ++; 
     fragment.appendChild(new_item);
 });
 
 item.appendChild(fragment);
+
+
+/*Navbar Locator*/
+const vp_height = window.innerHeight;
+const sections_position_list = new Array();
+
+//Gettiing navbar height
+const navbar = document.querySelector('header');
+const navbar_height = navbar.getBoundingClientRect().bottom;
+const sections = document.querySelectorAll('h2');
+
+//Getting element heights after DOM is loades
+document.addEventListener('DOMContentLoaded', e =>{
+    
+    sections.forEach(section => {
+
+        const section_position = {
+            'section_text': '',
+            'section_y': '',
+        };
+
+        const section_text = section.textContent;
+        const section_y = section.getBoundingClientRect().bottom;
+        section_position.section_text = section_text;
+        section_position.section_y = section_y;
+        sections_position_list.push(section_position); 
+    });
+
+    //Setting inicial section
+    document.getElementById('navbar-item-1').classList.add('underlined-navbar-item');
+     console.log(sections_position_list);
+    // console.log(sections_position_list.length);
+});
+
+//Getting element heights after resize
+window.addEventListener('resize', e =>{
+    console.log('hello');
+    let counter_2 = 0;
+    sections.forEach(section => {
+        sections_position_list[counter_2].section_y = section
+        .getBoundingClientRect().bottom;
+        counter_2 ++;
+    });
+    console.log(sections_position_list);
+});
+
+//Getting current section
+document.addEventListener('scroll', e =>{
+    
+    counter = 1;
+    sections.forEach(section => {
+        const section_y_current = (section.getBoundingClientRect().bottom);
+        if (section_y_current >= navbar_height && section_y_current <= (vp_height/3)){
+            
+            // //Removing styles from other sections
+            document.querySelectorAll('.underlined-navbar-item')
+            .forEach(other_item => other_item.classList.remove('underlined-navbar-item'));
+
+            //Setting current section style
+            const navbar_item = document.getElementById(`navbar-item-${counter}`);
+            navbar_item.classList.add('underlined-navbar-item');
+            counter = 1;
+        }
+        counter ++;
+    });
+});
+
+//Smooth Scrooling
+document.addEventListener('DOMContentLoaded', () =>{
+
+    const items = document.querySelectorAll('.navbar-item');
+    console.log(items);
+
+    
+    items.forEach( item => {
+        item.addEventListener('click', e => {
+
+            e.preventDefault;
+            console.log(e.target.textContent);
+
+            let offset_y = 0;
+
+            sections_position_list.forEach(section => {
+                if (e.target.textContent === section.section_text){
+                    offset_y = section.section_y;
+                    console.log(offset_y);
+                }
+            });
+
+            setTimeout(() =>{
+                console.log(sections_position_list);
+                console.log(offset_y);
+                offset_y = offset_y - navbar_height*2;
+                item.classList.add('underlined-navbar-item');
+                window.scrollBy({
+                    top: offset_y,
+                    left: 0,
+                    behavior: 'smooth',
+                });
+            }, 0.001);
+
+            let counter_1 = 0;
+
+            setTimeout(() =>{
+                sections.forEach(section => {
+                    // console.log(section
+                    //     .getBoundingClientRect().bottom);
+                    // console.log(counter_1);
+                    sections_position_list[counter_1].section_y = section
+                    .getBoundingClientRect().bottom;
+                    counter_1 ++;
+                    // console.log(counter_1);
+                });
+                console.log(sections_position_list);
+
+            }, 1000);
+
+            
+        });  
+        
+
+
+
+    });
+
+});
+
+
+
+
+
+
+
 
 /*Scores*/
 /*Scores from previous matches*/
