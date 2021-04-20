@@ -24,7 +24,6 @@ navbar_items.forEach(navbar_item => {
 
 item.appendChild(fragment);
 
-
 /*Navbar Locator*/
 const vp_height = window.innerHeight;
 const sections_position_list = new Array();
@@ -53,7 +52,7 @@ document.addEventListener('DOMContentLoaded', e =>{
 
     //Setting inicial section
     document.getElementById('navbar-item-1').classList.add('underlined-navbar-item');
-     console.log(sections_position_list);
+    console.log(sections_position_list);
     // console.log(sections_position_list.length);
 });
 
