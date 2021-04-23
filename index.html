@@ -11,7 +11,9 @@
     <header id="sticky-header-menu"  class="header-menu-container">
         <div  class="header-menu container flex">
             <div id="main-logo" class="navbar-logo">
-                <a href="#page-top" id="navbar-item-0">JMC</a>
+                <a href="#logo" id="navbar-item-0">
+                    <img src="./media/mh_logo.PNG" alt="" id="top-logo">
+                </a>
             </div>
             <nav class="navbar-items">
                 <ul id="navbar-list-items" class="flex">
@@ -25,13 +27,18 @@
     <div class="hero-image flex">
         <div class="container hero-content flex" id='hero'>
             <h1>NBA Favourite Team</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos 
+                excepturi quam distinctio accusantium amet blanditiis rerum itaque voluptas 
+                aliquam quae, quas nisi quod quia modi nostrum deleniti natus doloremque
+                qui!
+            </p>
         </div>
     </div>
 
     <!--Scores Summary-->
-    <div class="score-summary-container-big">
+    <div class="score-summary-container-big" id="scores">
         <div class="container">
-            <h2 class="section-title" id="scores">Scores</h2>
+            <h2 class="section-title" >Scores</h2>
         </div>  
         <div class="score-summary-container container grid" id="score-container">
             <!--All Scores are injected by JS, the following is just an example of the markup-->
@@ -54,9 +61,9 @@
     </div>
 
         <!--Team-->
-        <div class="team-container-big">
+        <div class="team-container-big" id="team">
             <div class="container">
-                <h2 class="section-title" id="team">Team</h2>
+                <h2 class="section-title" >Team</h2>
             </div>  
             <div class="team-container container grid" id="team-container">
                 <!--All TEam members are injected by JS, the following is just an example of the markup-->
@@ -105,7 +112,14 @@
                 <h2 class="section-title" id="live">Live</h2>
             </div>  
             <div class="live-summary-container container grid" id="live-container">
-              
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Iknf4tFFLrU" 
+                    title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Iknf4tFFLrU" 
+                    title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
+                </div>
             </div>
         </div>
         
@@ -135,12 +149,14 @@
                 <ul>
                     <li>Players</li>
                     <li>Team Stats</li>
+                    <li>Team Stats</li>
                 </ul>
             </div>
             <div class="footer-menu-items">
                 <h3>Team</h3>
                 <ul>
                     <li>Players</li>
+                    <li>Team Stats</li>
                     <li>Team Stats</li>
                 </ul>
             </div>
@@ -149,18 +165,28 @@
                 <ul>
                     <li>Players</li>
                     <li>Team Stats</li>
+                    <li>Team Stats</li>
                 </ul>
             </div>
             <div class="footer-menu-items">
-                <h3>Community</h3>
+                <h3>Live</h3>
                 <ul>
                     <li>Community</li>
+                    <li>Team Stats</li>
+                    <li>Team Stats</li>
+                </ul>
+            </div>
+            <div class="footer-menu-items">
+                <h3>Store</h3>
+                <ul>
+                    <li>Community</li>
+                    <li>Team Stats</li>
                     <li>Team Stats</li>
                 </ul>
             </div>
         </div>
     </footer>
 
-    <script src="./js/app.js"></script>
+    <script src="./js/app.js" type="module"></script>
 </body>
 </html>
