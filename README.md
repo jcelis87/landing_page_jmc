@@ -7,4 +7,7 @@ Udacity landing page project
 4) If user clicks a navbar item the page automatically scrolls to that section
 5)If the user scrolls down, the navbar desappears after 3 seconds
 
-The console errors are due to the embeded youtube videos and not the code.
+- The console errors are due to the embeded youtube videos and not the code. 
+-  Please install this project in your local machine, when I deployed it to Github pages, something strage happens with the main slider image and some of the styles.
+
+Thanks
