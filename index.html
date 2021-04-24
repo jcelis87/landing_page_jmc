@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <header id="sticky-header-menu"  class="header-menu-container">
+        <div  class="header-menu container flex">
+            <div id="main-logo" class="navbar-logo">
+                <a href="#logo" id="navbar-item-0">
+                    <img src="./media/mh_logo.PNG" alt="" id="top-logo">
+                </a>
+            </div>
+            <nav class="navbar-items">
+                <ul id="navbar-list-items" class="flex">
+                    <!--Menu is injected by JS-->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Hero Image-->
+    <div class="hero-image flex">
+        <div class="container hero-content flex" id='hero'>
+            <h1>NBA Favourite Team</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos 
+                excepturi quam distinctio accusantium amet blanditiis rerum itaque voluptas 
+                aliquam quae, quas nisi quod quia modi nostrum deleniti natus doloremque
+                qui!
+            </p>
+        </div>
+    </div>
+
+    <!--Scores Summary-->
+    <div class="score-summary-container-big" id="scores">
+        <div class="container">
+            <h2 class="section-title" >Scores</h2>
+        </div>  
+        <div class="score-summary-container container grid" id="score-container">
+            <!--All Scores are injected by JS, the following is just an example of the markup-->
+            <div class="match-score game-card flex">
+                <div class="match-date">
+                    Final
+                </div>
+                <div class="score-detail flex">
+                    <img src="./media/LAL.png" alt="">
+                    <span>104</span>
+                    <span>-</span>
+                    <span>110</span>
+                    <img src="./media/MIA-viceversa.png" alt="">
+                </div>
+                <div class="match-location flex">
+                    <span>Los Angeles</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--Team-->
+        <div class="team-container-big" id="team">
+            <div class="container">
+                <h2 class="section-title" >Team</h2>
+            </div>  
+            <div class="team-container container grid" id="team-container">
+                <!--All TEam members are injected by JS, the following is just an example of the markup-->
+                <div class="player-card flex">
+                    <img src="./media/players/roster-vv-2772.png" alt="">
+                    <div class="player-info">
+                        <div class="player-name">
+                            <span>Precious Achiuwa</span>
+                        </div>
+                        <div class="player-position">
+                            <span>#5 Forward</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Schedule-->
+        <div class="schedule-container-big">
+            <div class="container">
+                <h2 class="section-title" id="schedule">Schedule</h2>
+            </div>  
+            <div class="schedule-summary-container container grid" id="schedule-container">
+                <!--All Schedule are injected by JS, the following is just an example of the markup-->
+                <div class="match-score game-card flex">
+                    <div class="match-date">
+                        Tuesday - April 27th, 2021
+                    </div>
+                    <div class="score-detail flex">
+                        <img src="./media/LAL.png" alt="">
+                        <span>-</span>
+                        <span>-</span>
+                        <span>-</span>
+                        <img src="./media/MIA-viceversa.png" alt="">
+                    </div>
+                    <div class="match-location flex">
+                        <span>Denver</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Live-->
+        <div class="live-container-big">
+            <div class="container">
+                <h2 class="section-title" id="live">Live</h2>
+            </div>  
+            <div class="live-summary-container container grid" id="live-container">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Iknf4tFFLrU" 
+                    title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/Iknf4tFFLrU" 
+                    title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+    <!--Footer Menu-->
+    <footer class="footer-menu container">
+        <div class="divider grid">
+            <div class="container divider-line ">
+
+            </div>
+            <span class="divider-logo">
+                <img src="./media/mh_logo.PNG" alt="">
+            </span>
+        </div>
+        <div class="footer-menu-container container flex">
+            <div class="footer-menu-items">
+                <h3>Scores</h3>
+                <ul>
+                    <li>Players</li>
+                    <li>Team Stats</li>
+                    <li>Team Stats</li>
+                </ul>
+            </div>
+            <div class="footer-menu-items">
+                <h3>Team</h3>
+                <ul>
+                    <li>Players</li>
+                    <li>Team Stats</li>
+                    <li>Team Stats</li>
+                </ul>
+            </div>
+            <div class="footer-menu-items">
+                <h3>Schedule</h3>
+                <ul>
+                    <li>Players</li>
+                    <li>Team Stats</li>
+                    <li>Team Stats</li>
+                </ul>
+            </div>
+            <div class="footer-menu-items">
+                <h3>Live</h3>
+                <ul>
+                    <li>Community</li>
+                    <li>Team Stats</li>
+                    <li>Team Stats</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/app.js" type="module"></script>
+</body>
+</html>

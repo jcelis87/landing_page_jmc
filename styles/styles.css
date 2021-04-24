@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+/* General*/
+:root {
+    --mh-purple: #ff4dd0;
+    --mh-blue: #4bccff;
+    --mh-black: #15191D;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Titillium Web', sans-serif;  
+    line-height: 1.6;
+}
+
+body {
+    background: var(--mh-black); 
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-decoration-color: var(--mh-purple);
+}
+
+img {
+    width: 100%;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: white;
+    padding: 20px 15px 20px 15px;
+}
+
+/*Reusable*/
+.container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0px 10px 0px 10px;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+}
+
+.hide-element {
+    display: none;
+}
+
+/*Header menu*/
+.header-menu-container {
+    height: auto;
+    border-bottom: 2px solid var(--mh-purple);
+    font-size: 1.3em;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase; 
+    background-color: var(--mh-black);
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+.navbar-logo img{
+    width: 50px;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.header-menu.container.flex {
+    padding: 10px 10px 10px 10px;
+    color:white;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.navbar-items {
+    margin: 5px;
+    padding: 5px;
+} 
+
+.navbar-items ul li{
+    padding-right: 20px;
+}
+
+.underlined-navbar-item {
+    text-decoration: underline;
+    
+}
+
+/*Hero Image*/
+.hero-image {
+    margin: auto;
+    height: 70vh;
+    background-image: url("../media/_location-heat-viceversa.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    flex-direction: column;
+    justify-items: center;
+}
+
+.hero-content {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    height: auto;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    
+}
+
+.hero-content h1 {
+    margin: auto; 
+    text-transform: uppercase;  
+    text-align: center; 
+}
+
+.hero-content p {
+    text-align: center;
+}
+
+/*Score Slide*/
+.score-summary-container, .schedule-summary-container {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: stretch;
+    grid-gap: 20px;
+    padding: 40px 15px 40px 15px;
+}
+
+.game-card {
+    flex-direction: column;
+    text-transform: uppercase;
+    background-color: white;
+    font-weight: bold;
+}
+
+.game-card .score-detail {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 5px 0 5px 0;
+}
+
+.game-card .score-detail img{
+    width: 50px;
+    height: auto;
+}
+
+.game-card .match-location{
+    background-color: #474747;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    color: white;
+}
+
+/*Team*/
+.team-container {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    justify-items: stretch;
+    grid-gap: 20px;
+    padding: 40px 15px 40px 15px;
+}
+
+.player-card {
+    flex-direction: column;
+    color: white;
+    font-size: 1.2em;
+}
+
+.player-card .player-name {
+    font-weight: bold;
+}
+
+.player-card .player-position {
+    font-style: italic;
+}
+
+.team-container .player-card .img {
+    width: auto;
+    height: auto;
+}
+
+/*Live*/
+.live-summary-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    justify-items:center;
+    align-items: center;
+    grid-gap: 0px;
+    padding: 40px 15px 40px 15px;
+}
+
+.video-container iframe{
+    width: 600px;
+    height: 400px;
+}
+
+/*Footer*/
+.footer-menu {
+    height: auto;
+    font-weight: bold;
+    color: white;
+    padding: 30px 10px 30px 10px;
+    flex-direction: column;
+}
+
+.footer-menu .divider {
+    padding: 30px 0px 30px 0px;
+}
+
+.divider-line {
+    grid-column: 1 /  4;
+    grid-row: 1;
+    width: 100%;
+    height: 2px;
+    z-index: 0;
+    background: linear-gradient(135deg, #ff4dd0, #4bccff);
+}
+
+.footer-menu .divider .divider-logo{
+    grid-column: 2 /  3;
+    grid-row: 1;
+    width: 80px;
+    height: auto;
+    z-index: 1;
+}
+
+.footer-menu-container {
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.footer-menu-items h3 {
+    text-transform: uppercase;
+    color: var(--mh-purple);
+    font-size: 1.2em;
+}
+
+
+/*Tablet*/
+@media (max-width: 1024px) {
+
+    .hero-image {
+        margin: auto;
+        height: 50vh;
+    }
+
+    /*Score Slide*/
+    .score-summary-container, .schedule-summary-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    /*Team*/
+    .team-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /*Live*/
+    .live-summary-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+    }
+
+    /*Live*/
+    .video-container iframe{
+        width: 600px;
+        height: 400px;
+    }
+}
+
+
+/*Mobile*/
+@media (max-width: 768px) {
+
+    .header-menu.container.flex {
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.8em;
+    }
+
+    #navbar-list-items {
+        flex-direction: row;
+        align-items: center;
+        font-size: 1em;
+    }
+
+    .hero-image {
+        margin: auto;
+        height: 70vh;
+    }
+
+    .hero-content h1, .hero-content p {
+        font-size: 0.6em;
+        text-align: center;
+    }
+
+    /*Score Slide*/
+    .score-summary-container, .schedule-summary-container {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 40px;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    /*Team*/
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+     /*Live*/
+     .video-container iframe{
+        width: 300px;
+        height: 200px;
+    }
+
+    /*Footer*/
+    .footer-menu-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-menu-items{
+        padding: 20px;
+    }
+}
