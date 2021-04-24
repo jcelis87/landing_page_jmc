@@ -297,7 +297,6 @@ h2 {
         width: 600px;
         height: 400px;
     }
-
 }
 
 
@@ -351,25 +350,9 @@ h2 {
         flex-wrap: wrap;
         align-items: center;
         text-align: center;
-
     }
 
     .footer-menu-items{
         padding: 20px;
     }
-
 }
-
-
-
-
-
-
-
-/* .container {
-    background: linear-gradient(135deg, #ff4dd0, #4bccff);
-    filter: blur(0px);
-    height: 70vh;
-    
-    margin: auto;
-} */

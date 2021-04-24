@@ -4,7 +4,7 @@ export const navbar_items = [
     {'item_name': 'Team', 'link': '#', 'class':'navbar-item'},
     {'item_name': 'Schedule', 'link': '#', 'class':'navbar-item'},
     {'item_name': 'Live', 'link': '#', 'class':'navbar-item'},
-    {'item_name': 'Store', 'link': '#', 'class':'navbar-item'},
+    //{'item_name': 'Store', 'link': '#', 'class':'navbar-item'},
 ];
 
 

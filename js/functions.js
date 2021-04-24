@@ -19,7 +19,6 @@ export function createNavbar(navbar_items, item){
 
 // Function to create cards for Scores and Next Matches
 export function createCard (score_details, game_card_classes, score_container){
-
     const fragment_score = new DocumentFragment();
 
     score_details.forEach(score_detail => {
@@ -77,7 +76,6 @@ export function createCard (score_details, game_card_classes, score_container){
 
 // Function to create cards for Players
 export function createPlayerCard(players_details, player_card_classes, team_container){
-
     const fragment_players = new DocumentFragment();
 
     players_details.forEach( player => {
@@ -114,14 +112,12 @@ export function createPlayerCard(players_details, player_card_classes, team_cont
     });
     
     team_container.appendChild(fragment_players);
-
-}
+};
 
 // Active Section and Smooth Scrolling
 
 //Gets element heights after DOM is loades
 export function getInitialHeights(sections) {
-    
     //Getting element heights after DOM is loades  --->> ASK
     const sections_position_list = new Array();
     sections.forEach(section => {
@@ -135,70 +131,48 @@ export function getInitialHeights(sections) {
         section_position.section_y = section_y;
         sections_position_list.push(section_position); 
     });
-
-    //Setting inicial section
-    //document.getElementById('navbar-item-1').classList.add('underlined-navbar-item');
-
     return sections_position_list;
 };
 
 //Gets element heights if viewport is resized
 export function getResizeHeights(sections_position_list, sections) {
-    
     //Getting element heights after resize
-    console.log('hello');
     let counter_2 = 0;
-    console.log(sections);
-    console.log(sections_position_list);
-
     sections.forEach(section => {
         sections_position_list[counter_2].section_y = section
         .getBoundingClientRect().bottom;
         counter_2 ++;
     });
-
     return sections_position_list;
 };
 
 //Gets active/current section depending if section is in viewport
 export function getCurrentSection(vp_height, navbar_height, sections){
+    let counter = 1;
+    sections.forEach(section => {
+        const section_y_current = section.getBoundingClientRect().bottom;
+        if (section_y_current >= navbar_height && section_y_current <= (vp_height/2)){
+            //Removing styles from other sections
+            document.querySelectorAll('.underlined-navbar-item')
+            .forEach(other_item => other_item.classList.remove('underlined-navbar-item'));
 
-        let counter = 1;
-        sections.forEach(section => {
-            const section_y_current = section.getBoundingClientRect().bottom;
-            if (section_y_current >= navbar_height && section_y_current <= (vp_height/2)){
-                
-                //Removing styles from other sections
-                document.querySelectorAll('.underlined-navbar-item')
-                .forEach(other_item => other_item.classList.remove('underlined-navbar-item'));
-
-                //Setting current section style
-                const navbar_item = document.getElementById(`navbar-item-${counter}`);
-                navbar_item.classList.add('underlined-navbar-item');
-                counter = 1;
-            }
-            counter ++;
+            //Setting current section style
+            const navbar_item = document.getElementById(`navbar-item-${counter}`);
+            navbar_item.classList.add('underlined-navbar-item');
+            counter = 1;
+        }
+        counter ++;
     });
 };
 
 
-//Scroll window when user click a menu item
+//Scrolls window when user click a menu item
 export function scrollToSection(sections_position_list, navbar_height, target_text){
-   
-    console.log(sections_position_list);
-
     let offset_y = 0;
     sections_position_list.forEach(section_pos => {
-        console.log(target_text);
-        console.log(section_pos.section_text);
         if (target_text === section_pos.section_text){
             offset_y = section_pos.section_y - navbar_height * 2 ;
-            console.log(offset_y + navbar_height);
         }
     });
-
-    console.log(offset_y);
     window.scrollBy({top: offset_y, behavior: 'smooth'});
-    console.log(navbar_height); 
-
 };
